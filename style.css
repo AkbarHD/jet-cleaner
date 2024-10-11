@@ -330,8 +330,7 @@ body {
     color: #666;
 }
 
-/* pilihan card */
-/* Untuk section dan card tetap */
+/* ----------pilihan Promo--------- */
 .armada-section {
     background-color: #f8f9fa;
     margin-top: 80px;
@@ -353,12 +352,96 @@ body {
     margin-bottom: 15px;
 }
 
-/* Styling untuk harga lama */
 .old-price span {
-    color: red;
+    color: black;
     text-decoration: line-through;
     font-size: 1.4rem;
     font-weight: bold;
+}
+
+.promo-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #d96565;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    transform: rotate(-5deg);
+    display: inline-block;
+    padding: 5px 10px;
+    background: #ffe66d;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.promo-price {
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-aos="fade-in"] {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+[data-aos="fade-in"].aos-animate {
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-5deg);
+    }
+
+    50% {
+        transform: scale(1.09) rotate(-5deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(-5deg);
+    }
+}
+
+.promo-label {
+    animation: pulse 2s infinite;
+}
+
+.btn-pesan {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-pesan i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.btn-pesan:hover {
+    background-color: #e0a800;
+}
+
+.btn-pesan:hover {
+    background-color: #ffa000;
+}
+
+[data-aos="fade-in"] {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+[data-aos="fade-in"].aos-animate {
+    opacity: 1;
 }
 
 /* testimoni */
@@ -410,40 +493,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* Styling untuk harga promo */
-.promo-price {
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: #000;
-    margin-top: 5px;
-}
 
-.btn-pesan {
-    background-color: #ffc107;
-    color: #000;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-pesan i {
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-
-.btn-pesan:hover {
-    background-color: #e0a800;
-}
-
-.btn-pesan:hover {
-    background-color: #ffa000;
-}
 
 /* contact */
 .contact-section {
