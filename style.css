@@ -108,11 +108,15 @@ body {
     background-color: #333;
 }
 
+/* Menghilangkan navbar saat scroll berhenti (selain di atas) */
 .navbar.hidden {
     top: -100px;
+    /* Sembunyikan navbar dengan keluar dari viewport */
     transition: top 0.5s ease-in-out;
+    /* Transisi smooth untuk sembunyi */
 }
 
+/* Warna link saat scroll */
 .navbar.scrolled .nav-link {
     color: #333 !important;
 }
@@ -182,14 +186,12 @@ body {
 }
 
 .hero-section {
-    background-image: url('assets/img/bg-hero.jpg');
+    background-image: url('assets/img/bg-jet-cleaner.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     height: 110vh;
 }
-
-/* */
 
 .hero-overlay {
     position: absolute;
@@ -205,9 +207,10 @@ body {
     z-index: 1;
 }
 
+/* feature section */
 .feature-section {
     position: relative;
-    z-index: 1001;
+    z-index: 1;
     margin-top: -100px;
 }
 
@@ -271,6 +274,15 @@ body {
     width: 100%;
     height: 530px;
     border-radius: 30px;
+    border: 2px solid #f8f9fa;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+}
+
+.enhanced-image {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
+    border: 2px solid #e0e0e0;
 }
 
 .rental-title {
@@ -494,6 +506,94 @@ body {
 
 [data-aos="fade-in"].aos-animate {
     opacity: 1;
+}
+
+/* keunggulan */
+.keunggulan-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.keunggulan-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 5px solid #ffffff;
+    background: linear-gradient(145deg, #c66e16, #ba0a0a);
+}
+
+.keunggulan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.keunggulan-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.keunggulan-card:hover::before {
+    opacity: 1;
+}
+
+.keunggulan-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.keunggulan-card:hover .keunggulan-img {
+    transform: scale(1.05);
+}
+
+.keunggulan-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keunggulan-card:hover .keunggulan-overlay {
+    height: 100%;
+}
+
+.keunggulan-overlay h3 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Fancybox custom styles */
+.fancybox-caption {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* testimoni */

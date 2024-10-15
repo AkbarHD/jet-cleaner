@@ -16,6 +16,12 @@
         transitionEffect: "tube"
     });
 
+    Fancybox.bind("[data-fancybox]", {
+        caption: function (fancybox, carousel, slide) {
+            return slide.caption;
+        },
+    });
+
     let lastScrollTop = 0;
     let navbar = document.querySelector('.navbar');
 
@@ -35,4 +41,12 @@
         }
 
         lastScrollTop = scrollTop;
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.getElementById('jetCleanerVideo');
+        video.addEventListener('loadedmetadata', function () {
+            video.play();
+        });
     });
