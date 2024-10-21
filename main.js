@@ -23,10 +23,11 @@
     });
 
     let lastScrollTop = 0;
-    let navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.navbar');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
 
     window.addEventListener('scroll', function () {
-        let scrollTop = window.scrollY;
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         if (scrollTop > 50) {
             navbar.classList.add('scrolled');
@@ -34,13 +35,20 @@
             navbar.classList.remove('scrolled');
         }
 
-        if (scrollTop > lastScrollTop && scrollTop > 50) {
+        if (scrollTop > lastScrollTop && scrollTop > 50 && !navbarCollapse.classList.contains('show')) {
             navbar.classList.add('hidden');
         } else {
             navbar.classList.remove('hidden');
         }
 
         lastScrollTop = scrollTop;
+    });
+
+    // Tambahkan event listener untuk tombol hamburger
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    navbarToggler.addEventListener('click', function () {
+        navbar.classList.remove('hidden');
+        navbar.classList.add('scrolled');
     });
 
 
